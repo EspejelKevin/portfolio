@@ -1,0 +1,364 @@
+:root {
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --primary-color: #0ea5e9;
+    --text-main: #94a3b8;
+    --text-light: #f1f5f9;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 5%;
+}
+
+.links-navbar-container {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.links-navbar-container a:hover {
+    color: var(--primary-color);
+}
+
+.contact-navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-navbar:hover {
+    background-color: #0284c7;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+}
+
+.image-navbar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 5% 0;
+}
+
+section {
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+
+.section-title {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.aboutme-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 75vh;
+}
+
+.image-aboutme-container {
+    flex-shrink: 0;
+}
+
+.image-aboutme {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+}
+
+.aboutme-name {
+    color: var(--text-light);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.aboutme-job {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutme-text {
+    text-align: justify;
+}
+
+.quick-socials {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.quick-socials a {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.quick-socials a:hover {
+    color: var(--primary-color);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.jobs {
+    display: grid;
+    gap: 2rem;
+}
+
+.job-text {
+    text-align: justify;
+}
+
+.current-job,
+.job,
+.project {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.current-job:hover,
+.job:hover,
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.current-job h3,
+.job h3,
+.project h3 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.company,
+.date {
+    font-family: monospace;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.technology {
+    background-color: rgba(14, 165, 233, 0.15);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.repo {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.repo:hover {
+    text-decoration: underline;
+}
+
+.description {
+    text-align: justify;
+}
+
+.contact-me-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+}
+
+.contact-me-form label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.contact-me-form input,
+.contact-me-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-me-form input:focus,
+.contact-me-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-me-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-me-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.contact-me-form button:hover {
+    background-color: #0284c7;
+}
+
+.form-result-message {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+.form-result-message:not(:empty) {
+    display: block;
+}
+
+.form-result-message.success {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.form-result-message.error {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.contact-me-form button:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 5%;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+footer .social-links {
+    margin-bottom: 1rem;
+}
+
+footer .social-links a {
+    color: var(--text-light);
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .links-navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .aboutme-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 14rem;
+    }
+
+    .aboutme-name {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        margin-top: 8rem;
+    }
+}
